@@ -1,0 +1,320 @@
+2023-06-02 00:02:39.546  INFO 49708 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-02 00:02:39.920  INFO 49708 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-02 00:02:39.927  INFO 49708 --- [Thread-23] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-02 00:02:40.010  WARN 49708 --- [Thread-23] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-6 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-06-02 00:02:40.129  INFO 49708 --- [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:02:40.140  INFO 49708 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2023-06-02 00:02:40.230  INFO 49708 --- [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2023-06-02 00:02:42.864  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Starting BlogAppApisApplication using Java 17.0.6 on DESKTOP-U0Q4GGQ with PID 49708 (D:\DyaneshwarProjectWorkspace\blog-app-apis\target\classes started by hp in D:\DyaneshwarProjectWorkspace\blog-app-apis)
+2023-06-02 00:02:42.864 DEBUG 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-06-02 00:02:42.864  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-02 00:02:44.432  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-02 00:02:44.505  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
+2023-06-02 00:02:44.836  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9797 (http)
+2023-06-02 00:02:44.838  INFO 49708 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-02 00:02:44.838  INFO 49708 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-06-02 00:02:44.943  INFO 49708 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-02 00:02:44.943  INFO 49708 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2068 ms
+2023-06-02 00:02:45.034  INFO 49708 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-02 00:02:45.048  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2023-06-02 00:02:45.108  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2023-06-02 00:02:45.111  INFO 49708 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-02 00:02:45.415  INFO 49708 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-02 00:02:45.418  INFO 49708 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:02:45.702 DEBUG 49708 --- [restartedMain] c.c.b.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2023-06-02 00:02:46.019 DEBUG 49708 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)
+2023-06-02 00:02:46.019 DEBUG 49708 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.codewithdurgesh.blog.controllers.UserController; public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:02:46.140  WARN 49708 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-02 00:02:46.387  INFO 49708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@49e90328, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39890e81, org.springframework.security.web.context.SecurityContextPersistenceFilter@69761f2d, org.springframework.security.web.header.HeaderWriterFilter@52cc9e65, org.springframework.security.web.authentication.logout.LogoutFilter@ebf1752, com.codewithdurgesh.blog.security.JwtAuthenticationFilter@6b7f7e7c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3267f7e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@46e6879, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25769b7f, org.springframework.security.web.session.SessionManagementFilter@279e8958, org.springframework.security.web.access.ExceptionTranslationFilter@58306f5a, org.springframework.security.web.access.intercept.AuthorizationFilter@1a9d9ef6]
+2023-06-02 00:02:46.520  INFO 49708 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-02 00:02:46.765  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9797 (http) with context path ''
+2023-06-02 00:02:47.116  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Started BlogAppApisApplication in 4.55 seconds (JVM running for 17001.19)
+2023-06-02 00:02:47.360  INFO 49708 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-02 00:03:56.267  INFO 49708 --- [http-nio-9797-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-02 00:03:56.268  INFO 49708 --- [http-nio-9797-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-02 00:03:56.272  INFO 49708 --- [http-nio-9797-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2023-06-02 00:03:56.274 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:03:56.274 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:03:56.373 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:03:56.422 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:04:22.479 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:04:22.479 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:04:22.495 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:04:22.504 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:04:36.475 DEBUG 49708 --- [http-nio-9797-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:04:36.476 DEBUG 49708 --- [http-nio-9797-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:04:36.491 DEBUG 49708 --- [http-nio-9797-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:04:36.497 DEBUG 49708 --- [http-nio-9797-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:05:57.045  INFO 49708 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-02 00:05:57.081  INFO 49708 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-02 00:05:57.082  INFO 49708 --- [Thread-27] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-02 00:05:57.085  WARN 49708 --- [Thread-27] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-7 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-06-02 00:05:57.093  INFO 49708 --- [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:05:57.094  INFO 49708 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2023-06-02 00:05:57.108  INFO 49708 --- [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2023-06-02 00:05:57.387  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Starting BlogAppApisApplication using Java 17.0.6 on DESKTOP-U0Q4GGQ with PID 49708 (D:\DyaneshwarProjectWorkspace\blog-app-apis\target\classes started by hp in D:\DyaneshwarProjectWorkspace\blog-app-apis)
+2023-06-02 00:05:57.387 DEBUG 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-06-02 00:05:57.387  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-02 00:05:59.242  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-02 00:05:59.351  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 5 JPA repository interfaces.
+2023-06-02 00:06:00.574  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9797 (http)
+2023-06-02 00:06:00.576  INFO 49708 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-02 00:06:00.576  INFO 49708 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-06-02 00:06:00.978  INFO 49708 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-02 00:06:00.978  INFO 49708 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3587 ms
+2023-06-02 00:06:01.351  INFO 49708 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-02 00:06:01.366  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2023-06-02 00:06:01.420  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2023-06-02 00:06:01.421  INFO 49708 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-02 00:06:01.893  INFO 49708 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-02 00:06:01.895  INFO 49708 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:06:02.452 DEBUG 49708 --- [restartedMain] c.c.b.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2023-06-02 00:06:02.967 DEBUG 49708 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)
+2023-06-02 00:06:02.970 DEBUG 49708 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.codewithdurgesh.blog.controllers.UserController; public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:06:03.234  WARN 49708 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-02 00:06:03.408  INFO 49708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b6d0835, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25e03a8, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d890f0, org.springframework.security.web.header.HeaderWriterFilter@22d0c9b8, org.springframework.security.web.authentication.logout.LogoutFilter@7ac306, com.codewithdurgesh.blog.security.JwtAuthenticationFilter@55ca1461, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32512a4e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1668b8b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53f05731, org.springframework.security.web.session.SessionManagementFilter@6f2d537, org.springframework.security.web.access.ExceptionTranslationFilter@71202b3e, org.springframework.security.web.access.intercept.AuthorizationFilter@24d0fcd0]
+2023-06-02 00:06:03.531  INFO 49708 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-02 00:06:03.814  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9797 (http) with context path ''
+2023-06-02 00:06:04.164  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Started BlogAppApisApplication in 6.872 seconds (JVM running for 17198.239)
+2023-06-02 00:06:04.375  INFO 49708 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-02 00:06:22.635  INFO 49708 --- [http-nio-9797-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-02 00:06:22.636  INFO 49708 --- [http-nio-9797-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-02 00:06:22.638  INFO 49708 --- [http-nio-9797-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-02 00:06:22.638 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:06:22.638 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:06:22.687 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:06:22.790 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:06:34.541 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:06:34.541 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:06:34.554 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:06:34.570  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.controllers.UserController      : Entering request for create user
+2023-06-02 00:06:34.570  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer for creating User
+2023-06-02 00:06:34.619  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.services.impl.UserServiceImpl   : Completed dao layer for creating User
+2023-06-02 00:06:34.620  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.controllers.UserController      : Completed request for create user
+2023-06-02 00:06:34.625 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:09:04.295 DEBUG 49708 --- [http-nio-9797-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:09:04.296 DEBUG 49708 --- [http-nio-9797-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:09:04.308 DEBUG 49708 --- [http-nio-9797-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:09:04.312  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.controllers.UserController      : Entering request for create user
+2023-06-02 00:09:04.313  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer for creating User
+2023-06-02 00:09:04.331  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.services.impl.UserServiceImpl   : Completed dao layer for creating User
+2023-06-02 00:09:04.331  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.controllers.UserController      : Completed request for create user
+2023-06-02 00:09:04.334 DEBUG 49708 --- [http-nio-9797-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:09:24.164 DEBUG 49708 --- [http-nio-9797-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:09:24.165 DEBUG 49708 --- [http-nio-9797-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:09:24.176 DEBUG 49708 --- [http-nio-9797-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:09:24.182 DEBUG 49708 --- [http-nio-9797-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:14:14.571 DEBUG 49708 --- [http-nio-9797-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:14:14.572 DEBUG 49708 --- [http-nio-9797-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:14:14.590 DEBUG 49708 --- [http-nio-9797-exec-10] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:14:14.613 DEBUG 49708 --- [http-nio-9797-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:17:08.954 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:17:08.954 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:17:08.970 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:17:08.977 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:17:22.210 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:17:22.210 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:17:22.219 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:17:22.224  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.controllers.UserController      : Entering request for create user
+2023-06-02 00:17:22.224  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer for creating User
+2023-06-02 00:17:22.469  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.services.impl.UserServiceImpl   : Completed dao layer for creating User
+2023-06-02 00:17:22.469  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.controllers.UserController      : Completed request for create user
+2023-06-02 00:17:22.471 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:21:07.858 DEBUG 49708 --- [http-nio-9797-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:21:07.859 DEBUG 49708 --- [http-nio-9797-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:21:08.009 DEBUG 49708 --- [http-nio-9797-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:21:08.188 DEBUG 49708 --- [http-nio-9797-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:24:13.046 DEBUG 49708 --- [http-nio-9797-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/users
+2023-06-02 00:24:13.049 DEBUG 49708 --- [http-nio-9797-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:24:13.068 DEBUG 49708 --- [http-nio-9797-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/users
+2023-06-02 00:24:13.134 DEBUG 49708 --- [http-nio-9797-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:25:17.442 DEBUG 49708 --- [http-nio-9797-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/categories
+2023-06-02 00:25:17.818 DEBUG 49708 --- [http-nio-9797-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:25:17.830 DEBUG 49708 --- [http-nio-9797-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/categories
+2023-06-02 00:25:17.873 DEBUG 49708 --- [http-nio-9797-exec-1] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:34:37.921  INFO 49708 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-02 00:34:41.010  INFO 49708 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-02 00:34:41.071  INFO 49708 --- [Thread-31] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-02 00:34:41.438  WARN 49708 --- [Thread-31] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-8 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-06-02 00:34:41.664  INFO 49708 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:34:41.775  INFO 49708 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2023-06-02 00:34:42.001  INFO 49708 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2023-06-02 00:34:46.250  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Starting BlogAppApisApplication using Java 17.0.6 on DESKTOP-U0Q4GGQ with PID 49708 (D:\DyaneshwarProjectWorkspace\blog-app-apis\target\classes started by hp in D:\DyaneshwarProjectWorkspace\blog-app-apis)
+2023-06-02 00:34:46.250 DEBUG 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-06-02 00:34:46.251  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-02 00:34:47.894  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-02 00:34:47.987  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 5 JPA repository interfaces.
+2023-06-02 00:34:48.550  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9797 (http)
+2023-06-02 00:34:48.556  INFO 49708 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-02 00:34:48.557  INFO 49708 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-06-02 00:34:48.748  INFO 49708 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-02 00:34:48.749  INFO 49708 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2486 ms
+2023-06-02 00:34:48.853  INFO 49708 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-02 00:34:48.867  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2023-06-02 00:34:48.944  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2023-06-02 00:34:48.946  INFO 49708 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-02 00:34:49.357  INFO 49708 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-02 00:34:49.358  INFO 49708 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:34:49.804 DEBUG 49708 --- [restartedMain] c.c.b.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2023-06-02 00:34:50.548 DEBUG 49708 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)
+2023-06-02 00:34:50.553 DEBUG 49708 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.codewithdurgesh.blog.controllers.UserController; public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:34:50.781  WARN 49708 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-02 00:34:51.240  INFO 49708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3497e11e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@248bcb70, org.springframework.security.web.context.SecurityContextPersistenceFilter@72445465, org.springframework.security.web.header.HeaderWriterFilter@2b806862, org.springframework.security.web.authentication.logout.LogoutFilter@3364d36e, com.codewithdurgesh.blog.security.JwtAuthenticationFilter@44340004, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28eb20b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@809eb4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1b09853a, org.springframework.security.web.session.SessionManagementFilter@7422e243, org.springframework.security.web.access.ExceptionTranslationFilter@12c91781, org.springframework.security.web.access.intercept.AuthorizationFilter@2aea5c91]
+2023-06-02 00:34:51.852  INFO 49708 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-02 00:34:52.499  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9797 (http) with context path ''
+2023-06-02 00:34:53.105  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Started BlogAppApisApplication in 7.021 seconds (JVM running for 18927.18)
+2023-06-02 00:34:53.520  INFO 49708 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-02 00:35:32.763  INFO 49708 --- [http-nio-9797-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-02 00:35:33.131  INFO 49708 --- [http-nio-9797-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-02 00:35:33.139  INFO 49708 --- [http-nio-9797-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2023-06-02 00:35:33.141 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/categories
+2023-06-02 00:35:33.146 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:35:33.170  WARN 49708 --- [http-nio-9797-exec-2] c.c.b.security.JwtAuthenticationFilter   : Jwt token has Expired
+2023-06-02 00:35:33.170  INFO 49708 --- [http-nio-9797-exec-2] c.c.b.security.JwtAuthenticationFilter   : Username is null or Context is not null
+2023-06-02 00:35:33.170 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-06-02 00:35:33.172 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:35:33.179 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /error
+2023-06-02 00:35:33.180 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:35:33.180 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-06-02 00:35:33.180 DEBUG 49708 --- [http-nio-9797-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /error
+2023-06-02 00:35:33.203 DEBUG 49708 --- [http-nio-9797-exec-2] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:35:46.479 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/v1/auth/login
+2023-06-02 00:35:46.479 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:35:46.479  INFO 49708 --- [http-nio-9797-exec-4] c.c.b.security.JwtAuthenticationFilter   : Jwt token does not begin with Bearer
+2023-06-02 00:35:46.479  INFO 49708 --- [http-nio-9797-exec-4] c.c.b.security.JwtAuthenticationFilter   : Username is null or Context is not null
+2023-06-02 00:35:46.480 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2023-06-02 00:35:46.480 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/v1/auth/login
+2023-06-02 00:35:46.493  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.controllers.AuthController      : Entering request for logging to create token
+2023-06-02 00:35:46.987 DEBUG 49708 --- [http-nio-9797-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2023-06-02 00:35:46.997  INFO 49708 --- [http-nio-9797-exec-4] c.c.blog.controllers.AuthController      : Completing request for logging to create token
+2023-06-02 00:35:47.001 DEBUG 49708 --- [http-nio-9797-exec-4] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:36:28.134 DEBUG 49708 --- [http-nio-9797-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/categories
+2023-06-02 00:36:28.135 DEBUG 49708 --- [http-nio-9797-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:36:28.243 DEBUG 49708 --- [http-nio-9797-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/categories
+2023-06-02 00:36:28.310 DEBUG 49708 --- [http-nio-9797-exec-5] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:39:31.941 DEBUG 49708 --- [http-nio-9797-exec-6] o.s.security.web.FilterChainProxy        : Securing DELETE /api/users/24
+2023-06-02 00:39:31.944 DEBUG 49708 --- [http-nio-9797-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:39:31.957 DEBUG 49708 --- [http-nio-9797-exec-6] o.s.security.web.FilterChainProxy        : Secured DELETE /api/users/24
+2023-06-02 00:39:32.019 DEBUG 49708 --- [http-nio-9797-exec-6] o.s.s.a.i.a.MethodSecurityInterceptor    : Authorized ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long); target is of class [com.codewithdurgesh.blog.controllers.UserController] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:39:32.032  INFO 49708 --- [http-nio-9797-exec-6] c.c.blog.controllers.UserController      : Entering request to delete user with user id:24
+2023-06-02 00:39:32.033  INFO 49708 --- [http-nio-9797-exec-6] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer to Delete User with userId :24
+2023-06-02 00:39:32.156  INFO 49708 --- [http-nio-9797-exec-6] c.c.blog.services.impl.UserServiceImpl   : Completed dao layer to delete User with userId :24
+2023-06-02 00:39:32.157  INFO 49708 --- [http-nio-9797-exec-6] c.c.blog.controllers.UserController      : Completed request to delete user with user id:24
+2023-06-02 00:39:32.160 DEBUG 49708 --- [http-nio-9797-exec-6] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:39:40.452 DEBUG 49708 --- [http-nio-9797-exec-7] o.s.security.web.FilterChainProxy        : Securing DELETE /api/users/25
+2023-06-02 00:39:40.452 DEBUG 49708 --- [http-nio-9797-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:39:40.471 DEBUG 49708 --- [http-nio-9797-exec-7] o.s.security.web.FilterChainProxy        : Secured DELETE /api/users/25
+2023-06-02 00:39:40.474 DEBUG 49708 --- [http-nio-9797-exec-7] o.s.s.a.i.a.MethodSecurityInterceptor    : Authorized ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long); target is of class [com.codewithdurgesh.blog.controllers.UserController] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:39:40.474  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.controllers.UserController      : Entering request to delete user with user id:25
+2023-06-02 00:39:40.474  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer to Delete User with userId :25
+2023-06-02 00:39:40.514  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.services.impl.UserServiceImpl   : Completed dao layer to delete User with userId :25
+2023-06-02 00:39:40.514  INFO 49708 --- [http-nio-9797-exec-7] c.c.blog.controllers.UserController      : Completed request to delete user with user id:25
+2023-06-02 00:39:40.516 DEBUG 49708 --- [http-nio-9797-exec-7] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:39:46.931 DEBUG 49708 --- [http-nio-9797-exec-9] o.s.security.web.FilterChainProxy        : Securing DELETE /api/users/26
+2023-06-02 00:39:46.932 DEBUG 49708 --- [http-nio-9797-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:39:46.952 DEBUG 49708 --- [http-nio-9797-exec-9] o.s.security.web.FilterChainProxy        : Secured DELETE /api/users/26
+2023-06-02 00:39:46.956 DEBUG 49708 --- [http-nio-9797-exec-9] o.s.s.a.i.a.MethodSecurityInterceptor    : Authorized ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long); target is of class [com.codewithdurgesh.blog.controllers.UserController] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:39:46.956  INFO 49708 --- [http-nio-9797-exec-9] c.c.blog.controllers.UserController      : Entering request to delete user with user id:26
+2023-06-02 00:39:46.956  INFO 49708 --- [http-nio-9797-exec-9] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer to Delete User with userId :26
+2023-06-02 00:39:46.988  INFO 49708 --- [http-nio-9797-exec-9] c.c.blog.services.impl.UserServiceImpl   : Completed dao layer to delete User with userId :26
+2023-06-02 00:39:46.989  INFO 49708 --- [http-nio-9797-exec-9] c.c.blog.controllers.UserController      : Completed request to delete user with user id:26
+2023-06-02 00:39:46.992 DEBUG 49708 --- [http-nio-9797-exec-9] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:39:52.876 DEBUG 49708 --- [http-nio-9797-exec-8] o.s.security.web.FilterChainProxy        : Securing DELETE /api/users/27
+2023-06-02 00:39:52.876 DEBUG 49708 --- [http-nio-9797-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:39:52.887 DEBUG 49708 --- [http-nio-9797-exec-8] o.s.security.web.FilterChainProxy        : Secured DELETE /api/users/27
+2023-06-02 00:39:52.888 DEBUG 49708 --- [http-nio-9797-exec-8] o.s.s.a.i.a.MethodSecurityInterceptor    : Authorized ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long); target is of class [com.codewithdurgesh.blog.controllers.UserController] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:39:52.888  INFO 49708 --- [http-nio-9797-exec-8] c.c.blog.controllers.UserController      : Entering request to delete user with user id:27
+2023-06-02 00:39:52.888  INFO 49708 --- [http-nio-9797-exec-8] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer to Delete User with userId :27
+2023-06-02 00:39:52.927  INFO 49708 --- [http-nio-9797-exec-8] c.c.blog.services.impl.UserServiceImpl   : Completed dao layer to delete User with userId :27
+2023-06-02 00:39:52.927  INFO 49708 --- [http-nio-9797-exec-8] c.c.blog.controllers.UserController      : Completed request to delete user with user id:27
+2023-06-02 00:39:52.929 DEBUG 49708 --- [http-nio-9797-exec-8] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:40:00.154 DEBUG 49708 --- [http-nio-9797-exec-10] o.s.security.web.FilterChainProxy        : Securing DELETE /api/users/28
+2023-06-02 00:40:00.155 DEBUG 49708 --- [http-nio-9797-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Set SecurityContextHolder to empty SecurityContext
+2023-06-02 00:40:00.171 DEBUG 49708 --- [http-nio-9797-exec-10] o.s.security.web.FilterChainProxy        : Secured DELETE /api/users/28
+2023-06-02 00:40:00.172 DEBUG 49708 --- [http-nio-9797-exec-10] o.s.s.a.i.a.MethodSecurityInterceptor    : Authorized ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long); target is of class [com.codewithdurgesh.blog.controllers.UserController] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:40:00.172  INFO 49708 --- [http-nio-9797-exec-10] c.c.blog.controllers.UserController      : Entering request to delete user with user id:28
+2023-06-02 00:40:00.172  INFO 49708 --- [http-nio-9797-exec-10] c.c.blog.services.impl.UserServiceImpl   : Initiating dao layer to Delete User with userId :28
+2023-06-02 00:40:00.183 DEBUG 49708 --- [http-nio-9797-exec-10] s.s.w.c.SecurityContextPersistenceFilter : Cleared SecurityContextHolder to complete request
+2023-06-02 00:40:22.451  INFO 49708 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-02 00:40:22.727  INFO 49708 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-02 00:40:22.748  INFO 49708 --- [Thread-35] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-02 00:40:22.839  WARN 49708 --- [Thread-35] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-9 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-06-02 00:40:23.016  INFO 49708 --- [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:40:23.020  INFO 49708 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2023-06-02 00:40:23.189  INFO 49708 --- [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2023-06-02 00:40:24.637  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Starting BlogAppApisApplication using Java 17.0.6 on DESKTOP-U0Q4GGQ with PID 49708 (D:\DyaneshwarProjectWorkspace\blog-app-apis\target\classes started by hp in D:\DyaneshwarProjectWorkspace\blog-app-apis)
+2023-06-02 00:40:24.638 DEBUG 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-06-02 00:40:24.638  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : No active profile set, falling back to 1 default profile: "default"
+2023-06-02 00:40:26.971  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-02 00:40:27.174  INFO 49708 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 198 ms. Found 5 JPA repository interfaces.
+2023-06-02 00:40:28.331  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9797 (http)
+2023-06-02 00:40:28.334  INFO 49708 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-02 00:40:28.334  INFO 49708 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-06-02 00:40:28.496  INFO 49708 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-02 00:40:28.496  INFO 49708 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3848 ms
+2023-06-02 00:40:28.651  INFO 49708 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-02 00:40:28.711  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2023-06-02 00:40:28.779  INFO 49708 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2023-06-02 00:40:29.130  INFO 49708 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-06-02 00:40:29.483  INFO 49708 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-02 00:40:29.484  INFO 49708 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:40:29.785 DEBUG 49708 --- [restartedMain] c.c.b.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2023-06-02 00:40:30.107 DEBUG 49708 --- [restartedMain] .PrePostAnnotationSecurityMetadataSource : @org.springframework.security.access.prepost.PreAuthorize("hasRole(\'ADMIN\')") found on specific method: public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)
+2023-06-02 00:40:30.108 DEBUG 49708 --- [restartedMain] m.DelegatingMethodSecurityMetadataSource : Caching method [CacheKey[com.codewithdurgesh.blog.controllers.UserController; public org.springframework.http.ResponseEntity com.codewithdurgesh.blog.controllers.UserController.deleteUser(java.lang.Long)]] with attributes [[authorize: 'hasRole('ADMIN')', filter: 'null', filterTarget: 'null']]
+2023-06-02 00:40:30.271  WARN 49708 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-02 00:40:30.525  INFO 49708 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4bb9307c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ee74f3e, org.springframework.security.web.context.SecurityContextPersistenceFilter@12cd5ccc, org.springframework.security.web.header.HeaderWriterFilter@71c630f4, org.springframework.security.web.authentication.logout.LogoutFilter@54e164fa, com.codewithdurgesh.blog.security.JwtAuthenticationFilter@47492d46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@16f493ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56f54016, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38ed7468, org.springframework.security.web.session.SessionManagementFilter@67f3a9c5, org.springframework.security.web.access.ExceptionTranslationFilter@79ffa859, org.springframework.security.web.access.intercept.AuthorizationFilter@7a13182b]
+2023-06-02 00:40:30.867  INFO 49708 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-02 00:40:31.433  INFO 49708 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9797 (http) with context path ''
+2023-06-02 00:40:31.856  INFO 49708 --- [restartedMain] c.c.blog.BlogAppApisApplication          : Started BlogAppApisApplication in 7.4 seconds (JVM running for 19265.93)
+2023-06-02 00:40:32.228  INFO 49708 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-02 00:40:41.986  INFO 49708 --- [RMI TCP Connection(262)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-06-02 00:40:42.012  INFO 49708 --- [RMI TCP Connection(262)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-02 00:40:42.020  WARN 49708 --- [RMI TCP Connection(262)-127.0.0.1] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-10 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+2023-06-02 00:40:42.035  INFO 49708 --- [RMI TCP Connection(262)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-02 00:40:42.036  INFO 49708 --- [RMI TCP Connection(262)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2023-06-02 00:40:42.060  INFO 49708 --- [RMI TCP Connection(262)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
